@@ -3,6 +3,7 @@
 <table class="table">
   <tr>
     <th>Name</th>
+    <th>Trip</th>
     <th>Description</th>
     <th></th>
     <th></th>
@@ -12,6 +13,7 @@
 <% @destinations.each do |destination| %>
   <tr>
     <td><%= destination.name %></td>
+    <td><%= link_to @trip.name, @trip %></td>
     <td><%= destination.description %></td>
     <td><%= link_to 'Show', trip_destination_path(@trip, destination) %></td>
     <td><%= link_to 'Edit', edit_trip_destination_path(@trip, destination) %></td>

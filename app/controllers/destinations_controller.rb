@@ -20,7 +20,6 @@ class DestinationsController < ApplicationController
     @destination = Destination.find(params[:id])
   end
 
-
   def create
     @trip = Trip.find(params[:trip_id])
     @destination = @trip.destinations.new(params[:destination])
@@ -37,7 +36,7 @@ class DestinationsController < ApplicationController
     @destination = Destination.find(params[:id])
 
     if @destination.update_attributes(params[:destination])
-      redirect_to [@trip, @destination], notice: 'Destination was successfully updated.' 
+      redirect_to @trip, notice: 'Destination was successfully updated.' 
     else
       render action: "edit" 
     end

@@ -18,7 +18,7 @@
 
 	<% @trip.destinations.each do |destination| %>
 		<tr>
-			<td><%= link_to destination.name, trip_destination_path(@trip, destination) %></td>
+			<td><%= link_to destination.name, edit_trip_destination_path(@trip, destination) %></td>
 			<td><%= destination.description %></td>
 		</tr>
 	<% end %>
