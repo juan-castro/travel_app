@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: travel_app_development
   pool: 5
-  username: travel_app
+  username: jcastro
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,13 +43,7 @@ test:
   encoding: unicode
   database: travel_app_test
   pool: 5
-  username: travel_app
+  username: jcastro
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: travel_app_production
-  pool: 5
-  username: travel_app
-  password:
+
