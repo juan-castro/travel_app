@@ -1,4 +1,6 @@
 TravelApp::Application.routes.draw do
+  devise_for :users
+
   resources :destinations
 
   resources :trips do
