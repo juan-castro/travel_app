@@ -1,4 +1,5 @@
 TravelApp::Application.routes.draw do
+  resources :destinations
 
   resources :trips do
     resources :destinations

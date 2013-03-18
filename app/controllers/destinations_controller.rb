@@ -1,7 +1,6 @@
 class DestinationsController < ApplicationController
 
   def index
-    @trip = Trip.find(params[:trip_id])
     @destinations = Destination.all
   end
 

@@ -15,3 +15,11 @@
 .span9, .span3 {
 	margin-top: 50px;
 }
+
+.btn-primary {
+	color: #fff !important;
+}
+
+footer {
+	margin: 15px 0;
+}
