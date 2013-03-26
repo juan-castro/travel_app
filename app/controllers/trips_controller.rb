@@ -21,6 +21,7 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(params[:trip])
+    @trip.user = current_user
 
     if @trip.save
       redirect_to @trip, notice: 'Trip was successfully created.' 
