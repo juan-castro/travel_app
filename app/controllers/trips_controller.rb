@@ -1,5 +1,8 @@
 class TripsController < ApplicationController
 
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :owns_trip, only: [:edit, :update, :destroy]
+
   def index
     @trips = Trip.all
   end
@@ -42,4 +45,11 @@ class TripsController < ApplicationController
 
     redirect_to trips_url
   end
+
+  private
+    def owns_trip
+      if !user_signed_in? || current_user != Trip.find(params[:id]).user
+        redirect_to trips_path, error: "You don't have access"
+      end
+    end
 end
